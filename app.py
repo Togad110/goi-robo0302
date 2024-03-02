@@ -10,6 +10,7 @@ if "messages" not in st.session_state:
     st.session_state["messages"] = [
         {"role": "system", "content": "あなたは優秀なアシスタントAIです。"}
         ]
+        
 
 # チャットボットとやりとりする関数
 def communicate():
@@ -30,10 +31,10 @@ def communicate():
 
 
 # ユーザーインターフェイスの構築
-st.title("My AI Assistant")
-st.write("ChatGPT APIを使ったチャットボットです。")
+st.title("ごい先生")
+st.write("授業おつかれさまでした!授業のことを振り返ろう。")
 
-user_input = st.text_input("メッセージを入力してください。", key="user_input", on_change=communicate)
+user_input = st.text_input("まずは今日の授業で思ったことを一言。さらに、先生との対話を通して、新たな言葉を使って、自分の考えに迫ろう。", key="user_input", on_change=communicate)
 
 if st.session_state["messages"]:
     messages = st.session_state["messages"]
