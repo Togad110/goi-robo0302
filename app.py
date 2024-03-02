@@ -56,7 +56,7 @@ def communicate():
 st.title("ふりかえり・語彙ロボ")
 st.write("授業おつかれさまでした!授業のことを振り返ろう。")
 
-user_input = st.text_input("まずは今日の授業で思ったことを一言。さらに、先生との対話を通して、新たな言葉を使って、自分の考えに迫ろう。", key="user_input", on_change=communicate)
+user_input = st.text_input("まずは今日の授業で思ったことを一言。さらに、ロボとの対話を通して、新たな語彙を得て、自分の考えにより深く迫ろう。", key="user_input", on_change=communicate)
 
 if st.session_state["messages"]:
     messages = st.session_state["messages"]
