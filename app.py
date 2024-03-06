@@ -62,7 +62,7 @@ def communicate():
 
 
 # ユーザーインターフェイスの構築
-st.title("ふりかえり・語彙ロボ")
+st.title("ボキャブマイスター")
 st.write("授業おつかれさまでした!授業のことを振り返ろう。")
 
 user_input = st.text_input("まずは今日の授業で思ったことを一言。さらに、ロボとの対話を通して、新たな語彙を得て、自分の考えにより深く迫ろう。", key="user_input", on_change=communicate)
@@ -70,9 +70,9 @@ user_input = st.text_input("まずは今日の授業で思ったことを一言�
 if st.session_state["messages"]:
     messages = st.session_state["messages"]
 
-    for message in reversed(messages[1:]):  # 直近のメッセージを上に
+    for message in reversed(messages[1:]):  # 直近のメッセージを上に🧐
         speaker = "🙂"
         if message["role"]=="assistant":
-            speaker="🤖"
+            speaker="🧐"
 
         st.write(speaker + ": " + message["content"])
